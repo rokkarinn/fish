@@ -1,3 +1,7 @@
 function kube_ns
-  kubectl config set-context (kubectl config current-context) --namespace=$1
+    if kns | string match -eq "$argv"
+        kns "$argv" 
+    else
+        echo "$argv is not a namespace I'm familiar with"
+    end
 end
