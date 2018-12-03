@@ -1,3 +1,6 @@
+# Theme spacefish
+set SPACEFISH_KUBECONTEXT_SYMBOL \u2388' '
+
 # Ruby path
 set RUBY_BIN "/usr/local/opt/ruby/bin"
 
