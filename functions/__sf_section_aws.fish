@@ -12,7 +12,7 @@ function __sf_section_aws -d "Display the selected aws profile"
 	__sf_util_set_default SPACEFISH_AWS_SHOW true
 	__sf_util_set_default SPACEFISH_AWS_PREFIX "using "
 	__sf_util_set_default SPACEFISH_AWS_SUFFIX $SPACEFISH_PROMPT_DEFAULT_SUFFIX
-	__sf_util_set_default SPACEFISH_AWS_SYMBOL "☁️ "
+	__sf_util_set_default SPACEFISH_AWS_SYMBOL "☁️  "
 	__sf_util_set_default SPACEFISH_AWS_COLOR ff8700
 
 	# ------------------------------------------------------------------------------
@@ -34,6 +34,6 @@ function __sf_section_aws -d "Display the selected aws profile"
 	__sf_lib_section \
 		$SPACEFISH_AWS_COLOR \
 		$SPACEFISH_AWS_PREFIX \
-		"$SPACEFISH_AWS_SYMBOL""$aws_profile" \
+		"$SPACEFISH_AWS_SYMBOL ""$AWS_PROFILE" \
 		$SPACEFISH_AWS_SUFFIX
 end

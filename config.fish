@@ -17,3 +17,4 @@ set VSCODE_PATH "/Applications/Visual Studio Code.app/Contents/Resources/app/bin
 set -g fish_user_paths $DINO_BIN $RUBY_BIN $ICU4C_BINS $ICU4S_BIN $GETTEXT $MONO $PYTHON3 $VSCODE_PATH $fish_user_paths
 set -gx JDK_HOME "/Library/Java/JavaVirtualMachines/openjdk-11.jdk/Contents/Home"
 set -gx GOPATH "$HOME/Work/GO"
+set -gx EDITOR 'vim'
