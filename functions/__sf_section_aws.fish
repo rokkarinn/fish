@@ -34,6 +34,6 @@ function __sf_section_aws -d "Display the selected aws profile"
 	__sf_lib_section \
 		$SPACEFISH_AWS_COLOR \
 		$SPACEFISH_AWS_PREFIX \
-		"$SPACEFISH_AWS_SYMBOL ""$AWS_PROFILE" \
+		"$SPACEFISH_AWS_SYMBOL"(aws profile) \
 		$SPACEFISH_AWS_SUFFIX
 end

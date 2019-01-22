@@ -1,4 +1,4 @@
 function ll
-    ls -lah
+    ls -lah $argv 
 end
 
