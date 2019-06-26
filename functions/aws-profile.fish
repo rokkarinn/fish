@@ -1,7 +1,7 @@
 function aws-profile
   if string match -eq $argv 'dev' 'stage' 'prod' 
     aws profile $argv
-    aws-mfa 
+    aws-mfa --profile $argv
     set -gx AWS_SECRET_ACCESS_KEY (grep -A 7 "\[$argv\]" ~/.aws/credentials | grep aws_secret_access_key | awk '{print $3}')
     set -gx AWS_SESSION_TOKEN (grep -A 7 "\[$argv\]"  ~/.aws/credentials | grep aws_session_token | awk '{print $3}')
     set -gx AWS_ACCESS_KEY_ID (grep -A 7 "\[$argv\]"  ~/.aws/credentials | grep aws_access_key_id | awk '{print $3}')
