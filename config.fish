@@ -29,8 +29,9 @@ set -gx JDK_HOME "/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Ho
 set -gx GOPATH "$HOME/Work/GO"
 set -gx EDITOR 'vim'
 set -gx MFA_STS_DURATION 3600
+set -gx KREW_PATH $HOME/.krew/bin
 
-set -gx PATH $GEM_BIN $FASTLANE_BIN $PATH $ANDROID_HOME/tools $ANDROID_HOME/platform-tools $JAVA_HOME/bin
+set -gx PATH $GEM_BIN $FASTLANE_BIN $PATH $ANDROID_HOME/tools $ANDROID_HOME/platform-tools $JAVA_HOME/bin $KREW_PATH
 
 #set -gx JAVA_HOME (/usr/libexec/java_home -v 1.8)
 
@@ -45,6 +46,8 @@ set -gx DRONE_TOKEN JOOThkDcB6akKKQGf32lqHjPLYokNYT0
 
 set -gx PASSMANCLI_URL https://pmpexternal.icelandair.is
 set -gx PASSMANCLI_AUTHTOKEN B2171F19-22C7-499C-982B-72C2D1F050CD
+
+set -gx NODE_PATH (npm root -g)
 
 #Commandline tool for 1Password
 eval (op signin ivarmagda)
