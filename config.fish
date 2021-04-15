@@ -19,6 +19,9 @@ set -gx LANG en_US.UTF-8
 set ICU4S_BIN "/usr/local/opt/icu4c/bin"
 set ICU4C_BINS "/usr/local/opt/icu4c/sbin"
 
+# Kubectl pakcage manager
+set KREW "/Users/ivar/.krew/bin"
+
 set PYTHON3  "/Users/ivar/Library/Python/3.7/bin"
 set GETTEXT "/usr/local/opt/gettext/bin" 
 set MONO "/Library/Frameworks/Mono.framework/Versions/5.16.0/bin" 
@@ -33,7 +36,8 @@ set -gx GOPATH "$HOME/Work/GO"
 set -gx EDITOR 'vim'
 set -gx MFA_STS_DURATION 3600
 set -gx KREW_PATH $HOME/.krew/bin
-set -gx PATH $GEM_BIN $FASTLANE_BIN $PATH $ANDROID_HOME/tools $ANDROID_HOME/platform-tools $JAVA_HOME/bin $KREW_PATH $VIRTUAL_ENV_PATH
+set -gx LOCAL_BIN_PATH "$HOME/.local/bin"
+set -gx PATH $GEM_BIN $FASTLANE_BIN $PATH $ANDROID_HOME/tools $ANDROID_HOME/platform-tools $JAVA_HOME/bin $KREW_PATH $VIRTUAL_ENV_PATH $KREW $LOCAL_BIN_PATH
 
 #set -gx JAVA_HOME (/usr/libexec/java_home -v 1.8)
 
@@ -54,7 +58,7 @@ set -gx NODE_PATH (npm root -g)
 set -gx HELM_REPO_USERNAME chartmuseum
 set -gx HELM_REPO_PASSWORD rdKWAs410XPcAO1r05dIfZPyXaOSASmG
 set -gx GIT_PRIVATE_KEY $HOME/.ssh/id_rsa
-
+set -gx DRONE_AUTOSCALER http://localhost:8080
 #Autocomplete GitHub CLI
 #eval (gh completion -s fish)
 
@@ -70,3 +74,5 @@ set -gx GIT_PRIVATE_KEY $HOME/.ssh/id_rsa
 # tabtab source for slss package
 # uninstall by removing these lines or running `tabtab uninstall slss`
 [ -f /Users/ivar/.config/yarn/global/node_modules/tabtab/.completions/slss.fish ]; and . /Users/ivar/.config/yarn/global/node_modules/tabtab/.completions/slss.fish
+# jenv
+status --is-interactive; and source (jenv init -|psub)

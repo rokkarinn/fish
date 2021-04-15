@@ -1,4 +1,4 @@
 function python
-  /usr/local/bin/python3 $argv
+  /usr/bin/python3 $argv
 end
 
