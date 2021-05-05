@@ -76,3 +76,8 @@ set -gx DRONE_AUTOSCALER http://localhost:8080
 [ -f /Users/ivar/.config/yarn/global/node_modules/tabtab/.completions/slss.fish ]; and . /Users/ivar/.config/yarn/global/node_modules/tabtab/.completions/slss.fish
 # jenv
 status --is-interactive; and source (jenv init -|psub)
+
+if status is-interactive 
+and not set -q TMUX
+  tmux -f ~/.config/tmux/tmux.conf new-session -A s main
+end
