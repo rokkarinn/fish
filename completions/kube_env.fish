@@ -1,1 +1,2 @@
-complete -f -c kube_env -a "(ls -p ~/.kube/ | grep -v / | grep -v kubectx | xargs ls)"
+set -l kubeenv "(ls -p ~/.kube/ | grep -v / | grep -v kubectx)"
+complete -f -c kube_env -a $kubeenv
