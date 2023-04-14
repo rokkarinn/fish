@@ -1,6 +1,8 @@
 # Theme spacefish
 set SPACEFISH_KUBECONTEXT_SYMBOL \u2388' '
 
+set HOMBREW /usr/local/bin
+
 # Ruby path
 set RUBY_BIN "/usr/local/opt/ruby/bin"
 
@@ -37,7 +39,7 @@ set -gx EDITOR 'vim'
 set -gx MFA_STS_DURATION 3600
 set -gx KREW_PATH $HOME/.krew/bin
 set -gx LOCAL_BIN_PATH "$HOME/.local/bin"
-set -gx PATH $GEM_BIN $FASTLANE_BIN $PATH $ANDROID_HOME/tools $ANDROID_HOME/platform-tools $JAVA_HOME/bin $KREW_PATH $VIRTUAL_ENV_PATH $KREW $LOCAL_BIN_PATH
+set -gx PATH $GEM_BIN $FASTLANE_BIN $PATH $ANDROID_HOME/tools $ANDROID_HOME/platform-tools $JAVA_HOME/bin $KREW_PATH $VIRTUAL_ENV_PATH $KREW $LOCAL_BIN_PATH $HOMEBREW
 
 #set -gx JAVA_HOME (/usr/libexec/java_home -v 1.8)
 
@@ -76,8 +78,5 @@ set -gx DRONE_AUTOSCALER http://localhost:8080
 [ -f /Users/ivar/.config/yarn/global/node_modules/tabtab/.completions/slss.fish ]; and . /Users/ivar/.config/yarn/global/node_modules/tabtab/.completions/slss.fish
 # jenv
 status --is-interactive; and source (jenv init -|psub)
-
-if status is-interactive 
-and not set -q TMUX
-  tmux -f ~/.config/tmux/tmux.conf new-session -A s main
-end
+eval "$(/opt/homebrew/bin/brew shellenv)"
+starship init fish | source
