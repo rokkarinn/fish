@@ -1,7 +1,7 @@
 # Theme spacefish
 set SPACEFISH_KUBECONTEXT_SYMBOL \u2388' '
 
-set HOMBREW /usr/local/bin
+set HOMEBREW /usr/local/bin
 
 # Ruby path
 set RUBY_BIN "/usr/local/opt/ruby/bin"
@@ -40,7 +40,7 @@ set -gx MFA_STS_DURATION 3600
 set -gx KREW_PATH $HOME/.krew/bin
 set -gx LOCAL_BIN_PATH "$HOME/.local/bin"
 set -gx PATH $GEM_BIN $FASTLANE_BIN $PATH $ANDROID_HOME/tools $ANDROID_HOME/platform-tools $JAVA_HOME/bin $KREW_PATH $VIRTUAL_ENV_PATH $KREW $LOCAL_BIN_PATH $HOMEBREW
-
+set -gx EDITOR /opt/homebrew/bin/nvim
 #set -gx JAVA_HOME (/usr/libexec/java_home -v 1.8)
 
 test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shell_integration.fish
