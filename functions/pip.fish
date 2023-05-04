@@ -1,4 +1,4 @@
 function pip
-  /usr/local/bin/pip3 $argv
+  pip3 $argv
 end
 

@@ -32,7 +32,8 @@ set HOME_BIN_PATH "$HOME/bin"
 set VIRTUAL_ENV_PATH "/Users/ivar/Library/Python/3.8/bin"
 set -gx GEM_HOME "$HOME/.gems"
 set GEM_BIN "$GEM_HOME/bin"
-set -gx PATH $PATH $LUAVER_DIR $DINO_BIN $RUBY_BIN $ICU4C_BINS $ICU4S_BIN $GETTEXT $MONO $PYTHON3 $VSCODE_PATH $HOME_BIN_PATH $GNUBIN
+set HOMEBREW_BIN "/opt/homebrew/bin"
+set -gx PATH $PATH $LUAVER_DIR $DINO_BIN $RUBY_BIN $ICU4C_BINS $ICU4S_BIN $GETTEXT $MONO $PYTHON3 $VSCODE_PATH $HOME_BIN_PATH $GNUBIN $HOMEBREW_BIN
 set -gx JDK_HOME "/Library/Java/JavaVirtualMachines/jdk1.8.0_202.jdk/Contents/Home"
 set -gx GOPATH "$HOME/Work/GO"
 set -gx EDITOR 'vim'
@@ -47,6 +48,9 @@ test -e {$HOME}/.iterm2_shell_integration.fish ; and source {$HOME}/.iterm2_shel
 
 #set -g fish_user_paths "/usr/local/sbin" $fish_user_paths
 #set -g fish_user_paths "/usr/local/opt/mysql-client/bin" $fish_user_paths
+
+# Set env var path for PJ
+set -gx PROJECT_PATHS ~/Git
 
 set -gx DRONE_SERVER https://drone.dev.icelandairlabs.com
 set -gx DRONE_TOKEN JOOThkDcB6akKKQGf32lqHjPLYokNYT0
