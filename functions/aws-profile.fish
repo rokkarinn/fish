@@ -9,5 +9,6 @@ function aws-profile
 #  set -gx AWS_ACCESS_KEY_ID (grep -A 4 "\[$argv\]"  ~/.aws/credentials | grep aws_access_key_id | awk '{print $3}')
   set -gx AWS_PROFILE $argv
   set -gx AWS_DEFAULT_REGION "eu-central-1"
+  set -gx AWS_SDK_LOAD_CONFIG 1
   echo Profile switched to $argv
 end
